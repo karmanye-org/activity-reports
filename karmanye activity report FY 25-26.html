@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karmanye Foundation — Activity Report FY 2025-26</title>
+<style>
+  :root{
+    --ink:#20302b; --muted:#5c6b64; --line:#d9e2dd;
+    --brand:#2e7d6b; --brand-dark:#1f5a4d; --accent:#c8842b; --cream:#f7f5ef;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Georgia","Times New Roman",serif;
+    color:var(--ink); background:#fff; line-height:1.5; font-size:11pt;
+  }
+  .page{
+    max-width:820px; margin:0 auto; padding:26px 34px;
+  }
+  h1,h2,h3{font-family:"Georgia",serif; color:var(--brand-dark); margin:0 0 6px;}
+  p{margin:0 0 10px; text-align:justify;}
+  .muted{color:var(--muted);}
+  .small{font-size:9.5pt;}
+
+  /* ---------- COVER ---------- */
+  .cover{
+    text-align:center; padding:120px 40px 40px; page-break-after:always;
+  }
+  .paws{font-size:22pt; letter-spacing:6px; color:var(--brand);}
+  .cover h1{font-size:30pt; margin:22px 0 4px; letter-spacing:.5px;}
+  .cover .tag{font-style:italic; color:var(--muted); font-size:13pt; margin-bottom:60px;}
+  .cover .rpt{
+    display:inline-block; border-top:2px solid var(--accent); border-bottom:2px solid var(--accent);
+    padding:16px 30px; margin-top:20px;
+  }
+  .cover .rpt h2{font-size:16pt; color:var(--ink); margin:0;}
+  .cover .period{font-size:14pt; color:var(--brand-dark); margin-top:6px; font-weight:bold;}
+  .cover .foot{margin-top:80px; font-size:10pt; color:var(--muted);}
+
+  /* ---------- IDENTITY BLOCK ---------- */
+  .idblock{
+    background:var(--cream); border:1px solid var(--line); border-radius:6px;
+    padding:14px 18px; margin:0 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:9.5pt;
+  }
+  .idblock table{width:100%; border-collapse:collapse;}
+  .idblock td{padding:3px 6px; vertical-align:top;}
+  .idblock td.k{color:var(--muted); width:32%; white-space:nowrap;}
+  .fillin{color:#b03030;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .sec-title{
+    border-bottom:2px solid var(--brand); padding-bottom:5px; margin:4px 0 14px;
+    font-size:15pt;
+  }
+  .kicker{
+    font-family:Arial,Helvetica,sans-serif; text-transform:uppercase; letter-spacing:2px;
+    font-size:8.5pt; color:var(--accent); margin-bottom:2px;
+  }
+
+  /* ---------- SUMMARY TABLE ---------- */
+  table.data{width:100%; border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; font-size:9.5pt; margin:8px 0 16px;}
+  table.data th{background:var(--brand); color:#fff; text-align:left; padding:6px 8px; font-weight:600;}
+  table.data td{border-bottom:1px solid var(--line); padding:5px 8px; vertical-align:top;}
+  table.data tr:nth-child(even) td{background:#f4f8f6;}
+
+  .metrics{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 16px;}
+  .metric{
+    flex:1 1 140px; background:var(--cream); border:1px solid var(--line); border-radius:6px;
+    padding:10px 12px; font-family:Arial,Helvetica,sans-serif; text-align:center;
+  }
+  .metric .n{font-size:20pt; color:var(--brand-dark); font-weight:700; display:block;}
+  .metric .l{font-size:8.5pt; color:var(--muted); text-transform:uppercase; letter-spacing:1px;}
+
+  /* ---------- PHOTOS ---------- */
+  .gallery{display:flex; flex-wrap:wrap; gap:14px; margin:10px 0;}
+  .photo{flex:1 1 240px; max-width:250px;}
+  .photo img{width:100%; height:190px; object-fit:cover; border-radius:6px; border:1px solid var(--line);
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .photo .cap{font-family:Arial,Helvetica,sans-serif; font-size:8.5pt; color:var(--muted); margin-top:4px;}
+
+  /* ---------- MONTH BLOCKS ---------- */
+  .month{
+    break-inside:avoid; page-break-inside:avoid; margin:0 0 20px;
+    border-left:3px solid var(--brand); padding:2px 0 2px 16px;
+  }
+  .month h3{font-size:13pt; margin-bottom:2px; display:flex; justify-content:space-between; align-items:baseline;}
+  .month h3 .cnt{font-family:Arial,Helvetica,sans-serif; font-size:8.5pt; color:#fff; background:var(--accent);
+    padding:2px 8px; border-radius:10px; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .cases{font-family:Arial,Helvetica,sans-serif; font-size:8.8pt; color:var(--brand-dark); margin:0 0 6px;}
+  .cases b{color:var(--muted); font-weight:600;}
+
+  .newpage{page-break-before:always;}
+  .signoff{margin-top:30px; font-family:Arial,Helvetica,sans-serif; font-size:10pt;}
+  .signoff .line{margin-top:46px; border-top:1px solid var(--ink); width:240px;}
+
+  .cred{margin-top:34px; font-family:Arial,Helvetica,sans-serif; font-size:9.5pt; color:var(--muted); line-height:1.7;}
+  .cred b{color:var(--brand-dark);}
+  .mimg{display:flex; gap:6px; margin:8px 0 2px;}
+  .mimg img{width:20%; height:88px; object-fit:cover; border-radius:4px; border:1px solid var(--line);
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  @page{ size:A4; margin:16mm; }
+  @media print{
+    .page{max-width:none; margin:0; padding:0;}
+    body{font-size:10.5pt;}
+    a{color:inherit; text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="page cover">
+  <div class="paws">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
+  <h1>Karmanye Foundation</h1>
+  <div class="tag">Compassion &nbsp;·&nbsp; Care &nbsp;·&nbsp; Co-existence</div>
+  <div class="rpt">
+    <div class="kicker">Annual Report</div>
+    <h2>Activity Report</h2>
+    <div class="period">Financial Year 2025–26 &nbsp;(1 April 2025 – 31 March 2026)</div>
+  </div>
+  <div class="cred">
+    Registered Section 8 Not-for-Profit Company &nbsp;·&nbsp; <b>CIN:</b> U85300PN2021NPL203519<br>
+    <b>PAN:</b> AAICK9637J &nbsp;·&nbsp; <b>12A:</b> AAICK9637JE20241 &nbsp;·&nbsp; <b>80G:</b> AAICK9637JF20241<br>
+    <b>Director:</b> Tina Malkani &nbsp;·&nbsp; tina@karmanye.org &nbsp;·&nbsp; +91-9923334246
+  </div>
+  <div class="foot">
+    Prepared for filing with the Registrar of Companies (ROC)<br>
+    and in support of Income-Tax Section 80G / 12A compliance
+  </div>
+</div>
+
+<!-- ============ OVERVIEW ============ -->
+<div class="page">
+  <div class="kicker">Section 1</div>
+  <h2 class="sec-title">Organisation &amp; Overview</h2>
+
+  <div class="idblock">
+    <table>
+      <tr><td class="k">Name of Organisation</td><td>Karmanye Foundation, Pune</td></tr>
+      <tr><td class="k">Reporting Period</td><td>1 April 2025 to 31 March 2026 (FY 2025–26)</td></tr>
+      <tr><td class="k">Principal Area of Work</td><td>Rescue, treatment, sterilisation, rehabilitation and rehoming of community &amp; street animals</td></tr>
+      <tr><td class="k">Area of Operation</td><td>Pune (Kharadi–Wagholi and surrounding areas), Maharashtra</td></tr>
+      <tr><td class="k">Legal Status</td><td>Registered Section 8 Not-for-Profit Company (NPO)</td></tr>
+      <tr><td class="k">CIN</td><td>U85300PN2021NPL203519</td></tr>
+      <tr><td class="k">PAN</td><td>AAICK9637J</td></tr>
+      <tr><td class="k">12A Registration No.</td><td>AAICK9637JE20241</td></tr>
+      <tr><td class="k">80G Registration No.</td><td>AAICK9637JF20241</td></tr>
+      <tr><td class="k">Director</td><td>Tina Malkani</td></tr>
+      <tr><td class="k">Email</td><td>tina@karmanye.org</td></tr>
+      <tr><td class="k">Contact</td><td>+91-9923334246</td></tr>
+    </table>
+  </div>
+
+  <p>During the financial year 2025–26, Karmanye Foundation continued its core charitable mission of relieving the suffering of community and street animals in and around Pune. The Foundation operates on a report-driven model: cases are reported by citizens, feeders, guards and volunteers; the animal is picked up and assessed; veterinary treatment or surgery is arranged at private clinics or paid shelters; and, wherever possible, the animal is rehabilitated and released back to its territory or placed in a permanent home. Alongside individual rescues, the Foundation undertook sterilisation and vaccination drives, community feeding and water-bowl provision during summer, senior and palliative care, support for elderly human feeders, and public advocacy for animal welfare and justice.</p>
+
+  <p>This report summarises the Foundation's activities month by month across the year. Approximately <b>56 representative cases</b> have been documented from the Foundation's field records, selected to reflect the range and scale of work undertaken. Each monthly entry is a narrative account of the principal cases and initiatives handled during that month.</p>
+
+  <div class="metrics">
+    <div class="metric"><span class="n">12</span><span class="l">Months of Activity</span></div>
+    <div class="metric"><span class="n">~56</span><span class="l">Cases Documented</span></div>
+    <div class="metric"><span class="n">7+</span><span class="l">Activity Areas</span></div>
+    <div class="metric"><span class="n">Pune</span><span class="l">Area of Service</span></div>
+  </div>
+
+  <div class="kicker">Nature of Activities Undertaken</div>
+  <table class="data">
+    <tr><th>Activity Head</th><th>Description</th></tr>
+    <tr><td>Rescue &amp; Emergency Care</td><td>Pick-up and hospitalisation of injured, sick and accident-affected animals; emergency surgeries and critical care.</td></tr>
+    <tr><td>Medical Treatment</td><td>Wound management, fracture treatment, tumour removal, chemotherapy (TVT), laser therapy, tick-fever treatment.</td></tr>
+    <tr><td>Sterilisation &amp; Vaccination</td><td>Neutering/spaying of community animals; deworming, de-fleaing and vaccination.</td></tr>
+    <tr><td>Rehabilitation &amp; Release</td><td>Recovery at paid fosters/shelters followed by release back to home territory.</td></tr>
+    <tr><td>Adoption &amp; Rehoming</td><td>Placement of recovered animals into permanent and virtual-adoption homes.</td></tr>
+    <tr><td>Senior &amp; Palliative Care</td><td>Care for elderly and terminally ill animals; dignified end-of-life support.</td></tr>
+    <tr><td>Community &amp; Human Welfare</td><td>Water-bowl project, community feeding, and support for elderly animal feeders.</td></tr>
+    <tr><td>Advocacy &amp; Justice</td><td>Public awareness and pursuit of justice in cases of cruelty (e.g. the Foxy case).</td></tr>
+  </table>
+</div>
+
+<!-- ============ SUMMARY TABLE ============ -->
+<div class="page newpage">
+  <div class="kicker">Section 2</div>
+  <h2 class="sec-title">Month-wise Summary</h2>
+  <table class="data">
+    <tr><th style="width:20%">Month</th><th style="width:14%">Cases</th><th>Principal Focus</th></tr>
+    <tr><td>April 2025</td><td>4</td><td>Veera, Poppy — treatment &amp; recovery; new rescues</td></tr>
+    <tr><td>May 2025</td><td>6</td><td>Zoey surgery; Poppy adopted; deworming drive; feeder welfare</td></tr>
+    <tr><td>June 2025</td><td>5</td><td>Bhura released; ongoing orthopaedic cases; a farewell</td></tr>
+    <tr><td>July 2025</td><td>4</td><td>Oreo &amp; Bru — tumour cases; Bhola neutered; Sushi therapy</td></tr>
+    <tr><td>August 2025</td><td>2</td><td>Browny rescue; Sushi released after full recovery</td></tr>
+    <tr><td>September 2025</td><td>6</td><td>Multiple accident &amp; wound rescues; emergency care for Bhola</td></tr>
+    <tr><td>October 2025</td><td>5</td><td>Diwali-injury cases; Snowy (TVT); seniors Dadaji &amp; Mani</td></tr>
+    <tr><td>November 2025</td><td>5</td><td>Snowy chemo; Mani rehomed; neonatal pups; Kaluha</td></tr>
+    <tr><td>December 2025</td><td>5</td><td>Emergency cases Foxy &amp; Raju; two heartbreaking losses</td></tr>
+    <tr><td>January 2026</td><td>5</td><td>Nova &amp; Timon surgeries; Radha admitted &amp; operated</td></tr>
+    <tr><td>February 2026</td><td>4</td><td>Nova adoption drive; Elsa rescue; Rahul chemo</td></tr>
+    <tr><td>March 2026</td><td>6</td><td>Radha &amp; Elsa recovered; Gopal spine surgery; Foxy justice</td></tr>
+  </table>
+  <p class="small muted">Note: Case counts reflect representative cases documented for this report and are not the total number of animals assisted, which is higher. Dates are drawn from field records; where a specific date was unavailable, the case has been placed in the month of record.</p>
+</div>
+
+<!-- ============ MONTHLY NARRATIVES ============ -->
+<div class="page newpage">
+  <div class="kicker">Section 3</div>
+  <h2 class="sec-title">Month-by-Month Activity Record</h2>
+
+  <div class="month">
+    <h3>April 2025 <span class="cnt">4 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Veera · Poppy · Venkat Mama's dogs · Zoey</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image-1517248238-17460791309469109069487853283379.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image919226462-17460791389467419394140836539995.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image1362335915-17460791468248975982520917019494.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image-1573485270-1746079156370314512376156174528.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image-1683837142-17460791637726386760712387180471.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>The year opened with several animals in critical condition. <b>Veera</b>, found emaciated and reduced to skin and bones, was moved from a private vet to a paid shelter and placed on a structured protocol of IV fluids and nutrition; despite her frail state she was eating well and showing a clear will to live. <b>Poppy</b>, under treatment for an eye condition, improved steadily across two visits to an ophthalmology vet and was dewormed and vaccinated during the month, becoming well enough to be opened for adoption. The Foundation also supported the animals cared for by <b>Venkat Mama</b>, an elderly feeder who cooks chicken and rice at his tapri for the dogs he shelters, taking on a fresh case referred through him. Towards the month's end, <b>Zoey</b> was reported after silently enduring pain from a fluid build-up caused by an old trauma or fracture; she was taken into care, examined and stabilised. Together these cases set the tone for the year — reactive rescue combined with sustained veterinary follow-through.</p>
+  </div>
+
+  <div class="month">
+    <h3>May 2025 <span class="cnt">6 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Zoey · Maggie · Honey · Society dogs (deworming) · Poppy · Datta Mama</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image-452319981-1746077548873793579051130961011.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image1746457685-17460778120222557187665274392376.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/image_editor_output_image566721699-17460778227948645118358146618678.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/05/screenshot_2025-05-01-11-11-04-73_40deb401b9ffe8e1df2f1cc5ba480b128381729579900453257.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image1518546-17523070713788023842794343965880.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>May was a busy month of surgery, sterilisation support and one joyful adoption. <b>Zoey</b> underwent surgery in which the veterinarian removed multiple adhesions that had been forming pockets for fluid to collect around her shoulder; she was dewormed, de-fleaed and scheduled for vaccination, with steady improvement thereafter. <b>Maggie</b> — one of three siblings (with Ginger and Snowy) abandoned in a gunny sack years earlier and raised by the Foundation's feeder — was taken up for care. <b>Honey</b> returned to her territory after a deep paw gash was sutured and healed during a shelter admission. A <b>deworming and de-fleaing drive</b> was carried out for the community dogs of a local society, with several animals treated. The month's highlight was <b>Poppy</b>, who found a committed permanent home a week after her recovery. The Foundation also continued its human-welfare work, handing over a donation cheque to <b>Datta Mama</b>, an elderly feeder recovering from illness who was learning to walk again with a walker while still dreaming of the dogs he used to feed.</p>
+  </div>
+
+  <div class="month">
+    <h3>June 2025 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Bhura · Kalu · Pinky · Bheem · Khandya</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image-856679513-17523094018453990782192391083082.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image-1346453312-17523107258666054921757447058559.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/07/image-13.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/07/image-14.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/07/image-15.png" onerror="this.style.display='none'">
+    </div>
+    <p>June saw a long-awaited release and continued care for chronic cases. <b>Bhura</b>, a gentle senior taken in from a distant area, finally recovered after a long shelter stay and was released back to familiar ground. Several ongoing cases were updated: <b>Kalu</b> was healing from a fracture; <b>Pinky</b>, who had suffered a hip fracture requiring amputation and had also tested positive for tick fever, recovered after a month of medication and monitoring; and <b>Bheem</b>, first injured with a ball-and-socket joint injury back in October 2024, remained under care for a stubborn bacterial skin condition that had kept him in and out of the shelter for months. The month also brought loss: <b>Khandya</b>, healthy the previous night, was found lifeless in the morning. The community that loved him chose to give him a respectful, love-filled farewell rather than send him to the municipal pound — a reminder of the bond between the Foundation's work and the neighbourhoods it serves.</p>
+  </div>
+
+  <div class="month">
+    <h3>July 2025 <span class="cnt">4 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Oreo · Bru · Bhola · Sushi</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image-577033760-175231098675268609404623073989.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image1475004849-17523114912937115408168505310511.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image-275686321-1752311498275158452266944451514.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image-1220684094-17523115049231903207276331462737.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2025/07/image_editor_output_image-2052753221-1752311512366473346849081740098.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>July was dominated by tumour and wound cases requiring surgical intervention. <b>Oreo</b> was reported with a penile tumour, admitted, found fit for surgery after blood tests, and successfully operated upon; the external tumour was removed and he recovered well on medication. <b>Bru</b> was diagnosed with Transmissible Venereal Tumour (TVT), a contagious canine cancer, and started on chemotherapy — the standard course of treatment. <b>Bhola</b>, reported with a deep gash on his leg that could not be treated on-site because he would not allow daily dressing, was picked up and admitted to a paid shelter, and was neutered later in the month as part of his rehabilitation. <b>Sushi</b> continued a course of laser therapy that healed her wound well; she was dewormed and received her first vaccine dose, though a slight limp was expected to remain. Across all four cases, the Foundation bore transport, paid-shelter and veterinary costs, sustained through public donations.</p>
+  </div>
+
+  <div class="month">
+    <h3>August 2025 <span class="cnt">2 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Browny · Sushi</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-28.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-29.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-30.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-16.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-18.png" onerror="this.style.display='none'">
+    </div>
+    <p>August was a quieter month in terms of new intake but no less demanding. <b>Browny</b> proved extremely difficult to catch; after several days of failed attempts, a construction-site owner, Uncle Benny, kindly offered his site to help enclose and safely net the dog, who was then admitted for a worsening wound. Later in the month Browny developed a fresh wound on his cheek with facial swelling; being unapproachable, he was started on on-site treatment with medication in food while efforts to catch him continued. In a happier development, <b>Sushi</b> — fully healed and vaccinated — was released back to her territory; as she was still too young to be spayed, the reporter was asked to reconnect after three months so she could be picked up for sterilisation, keeping the Foundation's commitment to responsible population management intact.</p>
+  </div>
+
+  <div class="month">
+    <h3>September 2025 <span class="cnt">6 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Rani · Lalya · Jaanu · Luna · Bittu · Bhola</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-31.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-32.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-33.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-34.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/01/image-35.png" onerror="this.style.display='none'">
+    </div>
+    <p>September brought a high volume of accident and wound cases. <b>Rani</b>, a much-loved senior living in a hospital compound, was found limping and in severe pain following an accident weeks earlier, and was taken up for treatment. <b>Lalya</b> was reported with a wound that erupted with maggots within twenty-four hours; catching him took a three-day effort because his distress made him unwilling to stay still. <b>Jaanu</b> was caught only after a patient trust-building exercise. <b>Luna</b>, an animal adopted through the Foundation and living in a loving home, suffered recurring health trouble and an urgent funds appeal was raised for her care. <b>Bittu</b>, recovering from a fracture, developed a wound beneath his plaster cast, which had to be removed while the leg continued to heal under restriction. The month closed with an emergency: <b>Bhola</b> was found after lying helpless all day following a morning accident, and was rushed to an emergency hospital late at night for critical treatment.</p>
+  </div>
+
+  <div class="month">
+    <h3>October 2025 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Foxy · Lalya &amp; Browny (release) · Dadaji · Snowy · Mani</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-4.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-5.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-6.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-7.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-8.png" onerror="this.style.display='none'">
+    </div>
+    <p>October combined releases with a spate of new emergencies, several linked to Diwali. <b>Foxy</b> was readmitted with deep wounds on both thighs, likely from barbed wire, and treated at the shelter after on-site care failed. <b>Lalya and Browny</b> were both released after more than a month of treatment and stay. The festival season took its toll: <b>Dadaji</b>, an old boy, was found unable to stand after a hit-and-run during Diwali — one of many animals hurt in the panic caused by firecrackers. <b>Snowy</b> was diagnosed with TVT after being found bleeding, and was started on chemotherapy. <b>Mani</b>, a senior in his sunset years — hard of hearing, poor of sight and covered in sores — was picked up after being reported by a good Samaritan, and taken into care. The month reflected the Foundation's dual load of concluding long recoveries while absorbing a fresh wave of urgent cases.</p>
+  </div>
+
+  <div class="month">
+    <h3>November 2025 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Snowy · Mani · Kaluha · Kaali Ma's pups · Foster appeal</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-21.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-22.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-23.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-24.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/02/image-25.png" onerror="this.style.display='none'">
+    </div>
+    <p>November centred on continuing intensive treatment and successful rehoming. <b>Snowy</b> completed his first chemotherapy session, after which he contracted Babesia gibsoni tick fever and was treated with a triple-antibiotic course; his bleeding stopped, swelling reduced and he began eating well and recovering. <b>Mani</b>, the senior rescued the previous month, found virtual adopters within hours of an appeal being posted, securing ongoing support for his care of small tumours and an ear-and-eye infection. <b>Kaluha</b>, reported by a construction-site worker who arranged the site ambulance to transport him, was found to have a pelvic fracture from an old accident along with arthritis, and was taken in for treatment. The Foundation also stepped in for <b>Kaali Ma's orphaned neonatal pups</b>, placing them with a specialist foster experienced in hand-rearing new-borns after their mother passed away. An SOS appeal for a foster home or lactating mother was also circulated during the month.</p>
+  </div>
+
+  <div class="month">
+    <h3>December 2025 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Lalya · Foxy · Raju · Jabya · Kaali Ma's pups</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-4.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-5.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-6.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-7.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-8.png" onerror="this.style.display='none'">
+    </div>
+    <p>December was a month of severe emergencies and painful losses. <b>Lalya</b> was picked up with a badly swollen and scratched face, his lip torn through to the gums. <b>Foxy</b> was rushed to an emergency clinic after being reported bleeding from the mouth and vomiting fresh blood three times on the way — a frightening presentation that required immediate intervention. <b>Raju</b>, noticed by a daily observer to be breathing abnormally and off his food, was found on X-ray to have complete pleural effusion and needed emergency chest tapping to survive. The month also brought grief. <b>Jabya</b>, a dog very dear to the Foundation, developed tick fever that led to kidney failure and could not be saved. The orphaned pups of <b>Kaali Ma</b>, despite everyone's best efforts, were also lost. These losses were marked with dignity and mourning, underscoring the emotional weight carried alongside the medical work.</p>
+  </div>
+
+  <div class="month">
+    <h3>January 2026 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Nova · Timon · Foxy · Rahul · Radha &amp; Chikoo</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-97.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-98.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-99.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-100.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/03/image-101.png" onerror="this.style.display='none'">
+    </div>
+    <p>The new year began with major surgical cases. <b>Nova</b>, a young Indie found abandoned on a highway with both front legs broken, came through orthopaedic surgery bravely while also fighting Babesia gibsoni tick fever; a significant fundraising effort was mounted to meet hospitalisation bills exceeding ₹70,000. <b>Timon</b>, a cat found lying in blood outside his feeder's doorstep, was admitted for leg fractures and later readmitted when the bone caught an infection, with careful treatment chosen to avoid amputation. <b>Foxy's</b> case escalated after an attempt to return her to her original location failed — she remained anxious and constantly on the run — prompting a change of plan for her safety. Late in the month, <b>Rahul, Radha and Chikoo</b> were admitted together, and <b>Radha</b> underwent surgery. January demonstrated the Foundation's capacity to run several complex, high-cost medical cases in parallel while sustaining the fundraising to support them.</p>
+  </div>
+
+  <div class="month">
+    <h3>February 2026 <span class="cnt">4 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Nova (adoption) · Elsa · Rahul · Bhola</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-2.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-3.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-4.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-5.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-6.png" onerror="this.style.display='none'">
+    </div>
+    <p>February balanced a landmark rescue with recovery and rehoming. <b>Nova</b>, having healed from the surgery that repaired both his broken front legs, was put forward for adoption as a vaccinated young Indie male seeking a permanent home in Pune or Mumbai. The month's most demanding case was <b>Elsa</b>, whose rescue was documented in detail across several parts — a story of an animal who had been through severe hardship yet remained gentle and loving, and who was taken into care for rehabilitation. <b>Rahul</b>, an old dog blind in one eye, received his second chemotherapy session with his tumour gradually shrinking, a good appetite and no side effects so far, raising hopes of a full recovery and eventual release. The Foundation also revisited long-running cases such as <b>Bhola</b>. February showed the arc of the Foundation's model in a single month — from acute rescue through medical treatment to adoption.</p>
+  </div>
+
+  <div class="month">
+    <h3>March 2026 <span class="cnt">6 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Radha Rani · Elsa · Gopal · Foxy (justice) · Whitey</div>
+    <div class="mimg">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-60.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-61.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-62.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-63.png" onerror="this.style.display='none'">
+      <img src="https://karmanye.wordpress.com/wp-content/uploads/2026/05/image-65.png" onerror="this.style.display='none'">
+    </div>
+    <p>The financial year closed with recoveries, a major surgery and a significant advocacy effort. <b>Radha Rani</b> was released back to her location healed and tumour-free, with total treatment costs of about ₹22,030 met by the Foundation. <b>Elsa</b> continued to flourish under care, good nutrition and the right supplements. <b>Gopal</b>, a gentle pup of only seven to eight months who had suffered an accident, gastro-intestinal illness and fractures to his leg and spine, underwent spine surgery at a specialist clinic and began recovering. A new case, <b>Whitey</b>, was also taken up. The month's defining work, however, was the Foundation's advocacy in the <b>Foxy</b> case: after veterinary examination indicated her injuries were most likely the result of a human assault in the Kharadi–Wagholi area, the Foundation pressed publicly for justice, drawing press coverage and mobilising awareness of cruelty against community animals — extending its mission from rescue to accountability.</p>
+  </div>
+
+  <div class="signoff">
+    <p>This report is a true summary of the charitable activities carried out by Karmanye Foundation during the financial year 1 April 2025 to 31 March 2026, based on the Foundation's field and publication records.</p>
+    <div class="line"></div>
+    <div class="small muted">Authorised Signatory &nbsp;·&nbsp; Karmanye Foundation<br>Date: __________________ &nbsp; Place: Pune</div>
+  </div>
+</div>
+
+</body>
+</html>
