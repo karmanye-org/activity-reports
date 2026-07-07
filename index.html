@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karmanye Foundation — A Decade of Compassion (2014–2026)</title>
+<style>
+ :root{--ink:#22312c;--muted:#5f6d66;--line:#e3ebe6;--brand:#2e7d6b;--dark:#1c534700;--dark:#1c5347;--accent:#d08a2c;--accent2:#b8471f;--cream:#f6f3ec;--bg:#fbfcfb;}
+ *{box-sizing:border-box;}html,body{margin:0;padding:0;}
+ body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.62;-webkit-font-smoothing:antialiased;}
+ .wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+ h1,h2,h3{font-family:Georgia,serif;color:var(--dark);margin:0;letter-spacing:-.01em;}
+ p{margin:0 0 13px;} a{color:var(--brand);}
+ .kick{font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:3px;font-size:11px;color:var(--accent);font-weight:800;}
+ .sans{font-family:'Helvetica Neue',Arial,sans-serif;}
+
+ /* HERO */
+ .hero{position:relative;background:radial-gradient(1200px 400px at 15% -10%,rgba(208,138,44,.25),transparent),linear-gradient(158deg,#173f37,var(--brand));color:#fff;padding:66px 0 40px;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ .hero .paws{font-size:20px;letter-spacing:10px;opacity:.85;}
+ .hero h1{color:#fff;font-size:46px;line-height:1.1;margin:16px 0 8px;max-width:16ch;}
+ .hero .tag{font-style:italic;font-size:19px;opacity:.94;}
+ .hero .sub{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;line-height:1.7;opacity:.9;margin-top:20px;max-width:60ch;}
+ .hero .est{display:inline-block;margin-top:18px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:30px;}
+
+ /* COLLAGE STRIP */
+ .collage{display:grid;grid-template-columns:repeat(10,1fr);gap:0;background:#12332d;}
+ .collage img{width:100%;height:132px;object-fit:cover;display:block;filter:saturate(1.03);}
+ @media(max-width:820px){.collage{grid-template-columns:repeat(5,1fr);}.collage img{height:110px;}}
+ @media(max-width:480px){.collage{grid-template-columns:repeat(3,1fr);}}
+
+ /* STAT BAND */
+ .band{background:var(--cream);border-bottom:1px solid var(--line);}
+ .stats{display:flex;flex-wrap:wrap;padding:26px 0;}
+ .stat{flex:1 1 150px;text-align:center;padding:10px;position:relative;}
+ .stat+.stat::before{content:'';position:absolute;left:0;top:18%;height:64%;width:1px;background:var(--line);}
+ .stat .n{font-size:38px;font-weight:700;color:var(--dark);display:block;line-height:1;letter-spacing:-.02em;}
+ .stat .l{font-family:'Helvetica Neue',Arial,sans-serif;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-top:8px;}
+
+ section{padding:44px 0;border-bottom:1px solid var(--line);}
+ .sec-h{font-size:27px;margin-bottom:6px;line-height:1.2;}
+ .lead{color:var(--muted);font-size:15.5px;margin-bottom:22px;max-width:72ch;}
+
+ /* PULL QUOTE */
+ .pull{font-size:26px;font-style:italic;color:var(--dark);text-align:center;max-width:22ch;margin:8px auto;line-height:1.3;}
+ .pull small{display:block;font-style:normal;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-family:'Helvetica Neue',Arial,sans-serif;margin-top:12px;}
+
+ /* REPORT CARDS */
+ .rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:14px;}
+ .rcard{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;transition:.16s;color:var(--ink);}
+ .rcard:hover{border-color:var(--brand);box-shadow:0 10px 26px rgba(28,83,71,.12);transform:translateY(-3px);}
+ .rcard .ryear{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:800;color:var(--dark);font-size:16px;}
+ .rcard .rcases{display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:700;color:#fff;background:var(--accent);padding:2px 10px;border-radius:12px;margin:9px 0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ .rcard .rdesc{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);min-height:32px;}
+ .rcard .ropen{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;color:var(--brand);margin-top:8px;}
+
+ /* YEAR BARS */
+ .ybar{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:12px;margin:8px 0;}
+ .ylabel{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:12.5px;color:var(--dark);}
+ .ytrack{background:#eef3f0;border-radius:6px;height:24px;overflow:hidden;}
+ .yfill{background:linear-gradient(90deg,#3a9a84,var(--dark));height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;min-width:26px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ .yfill span{color:#fff;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:11.5px;padding-right:8px;}
+ .ymark{font-family:'Helvetica Neue',Arial,sans-serif;font-size:10.5px;font-weight:700;color:var(--accent2);white-space:nowrap;}
+ .note{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);margin-top:16px;padding:11px 15px;background:var(--cream);border-left:3px solid var(--accent);border-radius:5px;}
+
+ /* CATEGORY */
+ .cbar{display:grid;grid-template-columns:168px 1fr 42px;align-items:center;gap:10px;margin:7px 0;}
+ .cname{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;}
+ .ctrack{background:#eef3f0;border-radius:5px;height:15px;overflow:hidden;}
+ .cfill{background:var(--brand);height:100%;border-radius:5px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ .cval{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;color:var(--dark);text-align:right;}
+
+ /* THEME CARDS */
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:14px;}
+ .tcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px;}
+ .tcard .tn{font-size:32px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+ .tcard .th{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:13px;color:var(--dark);margin:7px 0 3px;}
+ .tcard .ts{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11.5px;color:var(--muted);}
+
+ /* TIMELINE */
+ .tl{border-left:2px solid var(--brand);margin-left:8px;padding-left:22px;}
+ .tl .ev{margin-bottom:17px;position:relative;}
+ .tl .ev::before{content:'';position:absolute;left:-29px;top:5px;width:11px;height:11px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 3px #fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ .tl .yr{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:800;color:var(--dark);font-size:13px;}
+ .tl .txt{font-size:14px;}
+
+ /* PEOPLE */
+ .people{background:var(--cream);border-radius:14px;padding:26px 28px;}
+ .people .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+ .chip{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;background:#fff;border:1px solid var(--line);color:var(--dark);padding:6px 13px;border-radius:20px;}
+
+ footer{background:var(--dark);color:#dcece6;padding:30px 0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;line-height:1.8;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ footer b{color:#fff;}
+ .about{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11.5px;color:var(--muted);margin:20px 0 0;padding:13px 16px;background:var(--cream);border-radius:6px;}
+</style></head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="paws">🐾 🐾 🐾</div>
+  <div class="kick" style="color:#ffd9a1">Impact Overview · 2014–2026</div>
+  <h1>A decade of compassion, one street at a time</h1>
+  <div class="tag">Karmanye Foundation — Compassion · Care · Co-existence</div>
+  <div class="sub">Feeding, rescuing, treating, sterilising and rehoming the community &amp; street animals of Pune — long before there was a registration certificate, and every day since.</div>
+  <div><span class="est">Serving Pune's streets since 2014</span></div>
+</div></header>
+
+<div class="collage"><img src="https://karmanye.org/wp-content/uploads/2018/03/img_20180307_1602138559631048592672953.jpg" alt="Mouni is back..healed and happy" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2020/05/img-20200512-wa0006715884499472369031.jpg" alt="Returning home #Covid19" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2020/08/img_20200808_102921_223.jpg" alt="Zoey is home!" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2021/02/img-20210202-wa0024.jpg" alt="Laku is back home 🏘️❤️" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2022/10/img_20221024_150749-1.jpg" alt="Happy Diwali 2022" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2022/10/img_20221017_212708_bokeh.jpg" alt="Happy Diwali 2022 to #hoomansofkarmanye" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2023/03/img_20230319_182411.jpg" alt="Happy releases 🤗20th March 2022" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2023/05/img-20230314-wa007428129.jpg" alt="🏠 ✨ NUGGET IS HOME 🏡✨" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2024/03/img-20240326-wa00216113530487058038426.jpg" alt="25th March '24 - Happy Birthday Mischka!" loading="lazy" onerror="this.style.display='none'"><img src="https://karmanye.org/wp-content/uploads/2024/06/image_editor_output_image-1904960119-17177725177508858691625116944398.jpg" alt="🐾 LET'S GET YUKI TO HIS FOREVER HOME! 🏠 " loading="lazy" onerror="this.style.display='none'"></div>
+
+<div class="band"><div class="wrap"><div class="stats">
+  <div class="stat"><span class="n">12+</span><div class="l">Years on the Streets</div></div>
+  <div class="stat"><span class="n">835</span><div class="l">Documented Updates</div></div>
+  <div class="stat"><span class="n">230</span><div class="l">Cases Profiled</div></div>
+  <div class="stat"><span class="n">2021</span><div class="l">Section 8 NPO Since</div></div>
+  <div class="stat"><span class="n">2023</span><div class="l">80G Certified</div></div>
+</div></div></div>
+
+<div class="wrap">
+
+<section>
+  <div class="kick">The Work</div>
+  <h2 class="sec-h">Real rescues. Real people. For more than a decade.</h2>
+  <p class="lead">Karmanye Foundation did not begin with paperwork. It began on the street in 2014, with one person feeding and caring for Pune's community dogs — and grew, case by case, into a registered non-profit trusted by an entire neighbourhood.</p>
+  <p>The method has never changed. A call comes in — from a security guard, a feeder, a tapri owner, a passer-by. The animal is found and assessed; treatment or surgery is arranged at private clinics and paid shelters; recovery is funded by ordinary people chipping in; and wherever possible the animal is healed and returned to its own territory, or placed in a loving home. Around that core run sterilisation and vaccination drives, summer water-bowls and winter beds, senior and palliative care, support for elderly human feeders, and a growing voice for animal welfare and justice. The record below is drawn from more than 835 public updates spanning 2014 to 2026 — the real, day-to-day work of real people.</p>
+</section>
+
+<section style="background:#fff">
+  <div class="kick">The Full Record</div>
+  <h2 class="sec-h">Annual activity reports</h2>
+  <p class="lead">Detailed, month-by-month activity reports for each financial year since formal registration — with photographs, case narratives and the Foundation's ROC / 80G credentials.</p>
+  <div class="rgrid">
+      <a class="rcard" href="https://karmanye-org.github.io/activity-reports/FY-21-22.html" target="_blank" rel="noopener"><div class="ryear">FY 2021-22</div><div class="rcases">33 cases</div><div class="rdesc">Founding-era rescues</div><div class="ropen">Open report &rarr;</div></a>
+      <a class="rcard" href="https://karmanye-org.github.io/activity-reports/FY-22-23.html" target="_blank" rel="noopener"><div class="ryear">FY 2022-23</div><div class="rcases">48 cases</div><div class="rdesc">Accountability &amp; the parvo litter</div><div class="ropen">Open report &rarr;</div></a>
+      <a class="rcard" href="https://karmanye-org.github.io/activity-reports/FY-23-24.html" target="_blank" rel="noopener"><div class="ryear">FY 2023-24</div><div class="rcases">39 cases</div><div class="rdesc">80G year; long-haul recoveries</div><div class="ropen">Open report &rarr;</div></a>
+      <a class="rcard" href="https://karmanye-org.github.io/activity-reports/FY-24-25.html" target="_blank" rel="noopener"><div class="ryear">FY 2024-25</div><div class="rcases">54 cases</div><div class="rdesc">Parallel surgeries &amp; chemo</div><div class="ropen">Open report &rarr;</div></a>
+      <a class="rcard" href="https://karmanye-org.github.io/activity-reports/FY-25-26.html" target="_blank" rel="noopener"><div class="ryear">FY 2025-26</div><div class="rcases">56 cases</div><div class="rdesc">Advocacy &amp; justice</div><div class="ropen">Open report &rarr;</div></a>
+  </div>
+</section>
+
+<section>
+  <div class="pull">"Another day. Another case."<small>— the founder's refrain, repeated across the years</small></div>
+</section>
+
+<section>
+  <div class="kick">Year on Year</div>
+  <h2 class="sec-h">Documented activity, 2014–2026</h2>
+  <p class="lead">Public updates per financial year. From a handful of posts in the early years to well over a hundred a year today — the steady climb of a grassroots effort becoming an institution.</p>
+      <div class="ybar"><div class="ylabel">FY2013-14</div><div class="ytrack"><div class="yfill" style="width:5%"><span>7</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2014-15</div><div class="ytrack"><div class="yfill" style="width:9%"><span>12</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2015-16</div><div class="ytrack"><div class="yfill" style="width:18%"><span>24</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2016-17</div><div class="ytrack"><div class="yfill" style="width:7%"><span>10</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2017-18</div><div class="ytrack"><div class="yfill" style="width:37%"><span>51</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2018-19</div><div class="ytrack"><div class="yfill" style="width:26%"><span>36</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2019-20</div><div class="ytrack"><div class="yfill" style="width:29%"><span>40</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2020-21</div><div class="ytrack"><div class="yfill" style="width:46%"><span>63</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2021-22</div><div class="ytrack"><div class="yfill" style="width:47%"><span>65</span></div></div><span class="ymark">Section 8 registered</span></div>
+      <div class="ybar"><div class="ylabel">FY2022-23</div><div class="ytrack"><div class="yfill" style="width:89%"><span>122</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2023-24</div><div class="ytrack"><div class="yfill" style="width:52%"><span>71</span></div></div><span class="ymark">80G certified</span></div>
+      <div class="ybar"><div class="ylabel">FY2024-25</div><div class="ytrack"><div class="yfill" style="width:98%"><span>134</span></div></div></div>
+      <div class="ybar"><div class="ylabel">FY2025-26</div><div class="ytrack"><div class="yfill" style="width:100%"><span>137</span></div></div></div>
+
+  <div class="note">Registration formalised long-running work rather than starting it: the Foundation became a Section 8 company in 2021 and received 80G certification in 2023. FY 2026-27 is already under way (63 updates in its first quarter alone). "Updates" count posts, not animals — the true number of animals helped is far higher.</div>
+</section>
+
+<section style="background:#fff">
+  <div class="kick">The Shape of the Work</div>
+  <h2 class="sec-h">Where the effort goes</h2>
+  <p class="lead">Approximate share of the 835 posts touching each kind of work (a single post often spans several — a rescue that is hospitalised, sterilised and rehomed counts in each). It maps the real weight of the operation: rescue and hospitalisation at its core, sustained by donor appeals.</p>
+      <div class="cbar"><div class="cname">Donation Appeal</div><div class="ctrack"><div class="cfill" style="width:100%"></div></div><div class="cval">373</div></div>
+      <div class="cbar"><div class="cname">Rescue</div><div class="ctrack"><div class="cfill" style="width:90%"></div></div><div class="cval">336</div></div>
+      <div class="cbar"><div class="cname">Shelters</div><div class="ctrack"><div class="cfill" style="width:86%"></div></div><div class="cval">319</div></div>
+      <div class="cbar"><div class="cname">Hospitalization</div><div class="ctrack"><div class="cfill" style="width:84%"></div></div><div class="cval">315</div></div>
+      <div class="cbar"><div class="cname">Sterilization</div><div class="ctrack"><div class="cfill" style="width:35%"></div></div><div class="cval">132</div></div>
+      <div class="cbar"><div class="cname">Feeding</div><div class="ctrack"><div class="cfill" style="width:35%"></div></div><div class="cval">130</div></div>
+      <div class="cbar"><div class="cname">Adoption</div><div class="ctrack"><div class="cfill" style="width:33%"></div></div><div class="cval">123</div></div>
+      <div class="cbar"><div class="cname">Vaccination</div><div class="ctrack"><div class="cfill" style="width:24%"></div></div><div class="cval">89</div></div>
+  <p style="margin-top:16px;font-size:14px;color:var(--muted)">Every rescue tends to pull in several of these at once — pick-up, a shelter or foster bed, hospitalisation and surgery, then vaccination and sterilisation before release or adoption — which is why the totals overlap.</p>
+</section>
+
+<section>
+  <div class="kick">What the Cases Tell Us</div>
+  <h2 class="sec-h">The clinical reality of the street</h2>
+  <p class="lead">Recurring themes across twelve years of documented cases — an unflinching window into what Pune's community animals actually face, and what it takes to help them.</p>
+  <div class="grid">
+      <div class="tcard"><div class="tn">129</div><div class="th">Sterilisation &amp; ABC</div><div class="ts">spay/neuter to stop street suffering at source</div></div>
+      <div class="tcard"><div class="tn">123</div><div class="th">Adoptions &amp; rehoming</div><div class="ts">forever homes, fosters &amp; virtual adopters</div></div>
+      <div class="tcard"><div class="tn">89</div><div class="th">Tumours, TVT &amp; chemo</div><div class="ts">lump removals to 19-week chemotherapy</div></div>
+      <div class="tcard"><div class="tn">85</div><div class="th">Fractures &amp; orthopaedic</div><div class="ts">plates, casts, pelvic &amp; hip surgeries</div></div>
+      <div class="tcard"><div class="tn">64</div><div class="th">Tick fever &amp; paralysis</div><div class="ts">Babesia, and dogs re-taught to walk</div></div>
+      <div class="tcard"><div class="tn">63</div><div class="th">Hit-and-run trauma</div><div class="ts">the most common street emergency</div></div>
+      <div class="tcard"><div class="tn">47</div><div class="th">Farewells</div><div class="ts">the terminally ill, grieved as family</div></div>
+      <div class="tcard"><div class="tn">42</div><div class="th">Senior &amp; palliative care</div><div class="ts">dignity in the sunset years</div></div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="kick">Threads Across the Years</div>
+  <h2 class="sec-h">The same dogs, cared for over time</h2>
+  <p>What sets the Foundation apart is continuity. These are not one-off rescues but the same community animals watched over for years. <b>Zoey</b>, found paralysed after a hit-and-run, recurs from 2020 through 2022 as her seizures are managed. <b>Moti</b> is treated from a leg tumour into a tail amputation across 2021–22. <b>Whitey</b>'s 2022 ordeal — paralysed by a botched shelter sterilisation, misdiagnosed, then amputated — ends with her walking home a happy tripod. <b>Browny</b> beats distemper in 2023 and, two years later, survives a multiple-fracture hit-and-run. Through the chemotherapy of <b>Pillya</b>, the tick-paralysis recovery of <b>Pillu</b>, the long surgical road of <b>Bhairoo</b>, and the returning names of <b>Sweety</b>, <b>Baba</b> and <b>Julie</b>, one truth holds: the Foundation stays with an animal for as long as it takes.</p>
+</section>
+
+<section>
+  <div class="kick">Milestones</div>
+  <h2 class="sec-h">How the work grew</h2>
+  <div class="tl">
+    <div class="ev"><div class="yr">2014 · The beginning</div><div class="txt">Documented rescue and feeding work begins on the streets of Pune — the earliest posts date to February 2014.</div></div>
+    <div class="ev"><div class="yr">2017–2020 · Grassroots years</div><div class="txt">Years of hands-on rescue, adoption drives and community feeding, and a growing circle of supporters — the guards, feeders, fosters, vets and donors who came to be known as the <b>#hoomansofkarmanye</b>.</div></div>
+    <div class="ev"><div class="yr">2021 · Formalised</div><div class="txt">Incorporated as a Section 8 non-profit company (CIN U85300PN2021NPL203519), giving the work a formal, accountable structure.</div></div>
+    <div class="ev"><div class="yr">2022 · Scale &amp; accountability</div><div class="txt">Caseload doubles. The Foundation exposes and nurses the survivors of a botched mass-sterilisation at a popular shelter, and fights a parvo outbreak among a rescued litter.</div></div>
+    <div class="ev"><div class="yr">2023 · 80G certification</div><div class="txt">Receives 80G certification (April 2023), enabling tax-deductible donations — alongside long-haul medical cases and a winter-beds project.</div></div>
+    <div class="ev"><div class="yr">2024–25 · Complexity</div><div class="txt">Runs multiple high-cost surgeries in parallel, chemotherapy protocols, senior and palliative care, and virtual-adoption programmes.</div></div>
+    <div class="ev"><div class="yr">2025–26 · Advocacy &amp; justice</div><div class="txt">Extends its mission from rescue to accountability — pressing publicly for justice in a cruelty case and drawing press coverage — at its highest documented caseload yet.</div></div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="kick">The People</div>
+  <h2 class="sec-h">Real work, by real people</h2>
+  <div class="people">
+    <p style="margin:0">Behind every rescue is a network of ordinary people. The Foundation's work runs on the tapri owners who cook for street dogs, the construction-site guards who call at 2 a.m., the fosters who hand-rear orphaned pups, the vets who take midnight emergencies, the drivers who ferry animals across the city, and the hundreds of donors who fund a bill they will never see repaid. They are the <b>#hoomansofkarmanye</b>.</p>
+    <div class="chips">
+      <span class="chip">Feeders &amp; tapri owners</span><span class="chip">Site guards</span><span class="chip">Foster homes</span>
+      <span class="chip">Partner vets &amp; clinics</span><span class="chip">Transport volunteers</span><span class="chip">Donors &amp; virtual adopters</span>
+    </div>
+  </div>
+</section>
+
+<div class="about">About this data: figures are drawn from Karmanye Foundation's complete public post archive (835 posts, Feb 2014 – Jul 2026), grouped by financial year (1 April – 31 March). "Documented updates" counts posts, not animals; one animal often spans many updates, and many are helped without a dedicated post, so the true reach is greater. Theme counts are keyword-based and indicative. Photographs are the Foundation's own, linked from its archive.</div>
+
+</div>
+
+<footer><div class="wrap">
+  <b>Karmanye Foundation</b> — Registered Section 8 Not-for-Profit Company, Pune &nbsp;·&nbsp; serving Pune's streets since 2014<br>
+  CIN U85300PN2021NPL203519 · PAN AAICK9637J · 12A AAICK9637JE20241 · 80G AAICK9637JF20241<br>
+  Director: Tina Malkani · tina@karmanye.org · +91-9923334246 · www.karmanye.org
+</div></footer>
+
+</body></html>
