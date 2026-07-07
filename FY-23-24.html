@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karmanye Foundation — Activity Report FY 2023-24</title>
+<style>
+  :root{
+    --ink:#20302b; --muted:#5c6b64; --line:#d9e2dd;
+    --brand:#2e7d6b; --brand-dark:#1f5a4d; --accent:#c8842b; --cream:#f7f5ef;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Georgia","Times New Roman",serif;
+    color:var(--ink); background:#fff; line-height:1.5; font-size:11pt;
+  }
+  .page{
+    max-width:820px; margin:0 auto; padding:26px 34px;
+  }
+  h1,h2,h3{font-family:"Georgia",serif; color:var(--brand-dark); margin:0 0 6px;}
+  p{margin:0 0 10px; text-align:justify;}
+  .muted{color:var(--muted);}
+  .small{font-size:9.5pt;}
+
+  /* ---------- COVER ---------- */
+  .cover{
+    text-align:center; padding:120px 40px 40px; page-break-after:always;
+  }
+  .paws{font-size:22pt; letter-spacing:6px; color:var(--brand);}
+  .cover h1{font-size:30pt; margin:22px 0 4px; letter-spacing:.5px;}
+  .cover .tag{font-style:italic; color:var(--muted); font-size:13pt; margin-bottom:60px;}
+  .cover .rpt{
+    display:inline-block; border-top:2px solid var(--accent); border-bottom:2px solid var(--accent);
+    padding:16px 30px; margin-top:20px;
+  }
+  .cover .rpt h2{font-size:16pt; color:var(--ink); margin:0;}
+  .cover .period{font-size:14pt; color:var(--brand-dark); margin-top:6px; font-weight:bold;}
+  .cover .foot{margin-top:80px; font-size:10pt; color:var(--muted);}
+
+  /* ---------- IDENTITY BLOCK ---------- */
+  .idblock{
+    background:var(--cream); border:1px solid var(--line); border-radius:6px;
+    padding:14px 18px; margin:0 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:9.5pt;
+  }
+  .idblock table{width:100%; border-collapse:collapse;}
+  .idblock td{padding:3px 6px; vertical-align:top;}
+  .idblock td.k{color:var(--muted); width:32%; white-space:nowrap;}
+  .fillin{color:#b03030;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .sec-title{
+    border-bottom:2px solid var(--brand); padding-bottom:5px; margin:4px 0 14px;
+    font-size:15pt;
+  }
+  .kicker{
+    font-family:Arial,Helvetica,sans-serif; text-transform:uppercase; letter-spacing:2px;
+    font-size:8.5pt; color:var(--accent); margin-bottom:2px;
+  }
+
+  /* ---------- SUMMARY TABLE ---------- */
+  table.data{width:100%; border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; font-size:9.5pt; margin:8px 0 16px;}
+  table.data th{background:var(--brand); color:#fff; text-align:left; padding:6px 8px; font-weight:600;}
+  table.data td{border-bottom:1px solid var(--line); padding:5px 8px; vertical-align:top;}
+  table.data tr:nth-child(even) td{background:#f4f8f6;}
+
+  .metrics{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 16px;}
+  .metric{
+    flex:1 1 140px; background:var(--cream); border:1px solid var(--line); border-radius:6px;
+    padding:10px 12px; font-family:Arial,Helvetica,sans-serif; text-align:center;
+  }
+  .metric .n{font-size:20pt; color:var(--brand-dark); font-weight:700; display:block;}
+  .metric .l{font-size:8.5pt; color:var(--muted); text-transform:uppercase; letter-spacing:1px;}
+
+  /* ---------- PHOTOS ---------- */
+  .gallery{display:flex; flex-wrap:wrap; gap:14px; margin:10px 0;}
+  .photo{flex:1 1 240px; max-width:250px;}
+  .photo img{width:100%; height:190px; object-fit:cover; border-radius:6px; border:1px solid var(--line);
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .photo .cap{font-family:Arial,Helvetica,sans-serif; font-size:8.5pt; color:var(--muted); margin-top:4px;}
+
+  /* ---------- MONTH BLOCKS ---------- */
+  .month{
+    break-inside:avoid; page-break-inside:avoid; margin:0 0 20px;
+    border-left:3px solid var(--brand); padding:2px 0 2px 16px;
+  }
+  .month h3{font-size:13pt; margin-bottom:2px; display:flex; justify-content:space-between; align-items:baseline;}
+  .month h3 .cnt{font-family:Arial,Helvetica,sans-serif; font-size:8.5pt; color:#fff; background:var(--accent);
+    padding:2px 8px; border-radius:10px; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .cases{font-family:Arial,Helvetica,sans-serif; font-size:8.8pt; color:var(--brand-dark); margin:0 0 6px;}
+  .cases b{color:var(--muted); font-weight:600;}
+
+  .newpage{page-break-before:always;}
+  .signoff{margin-top:30px; font-family:Arial,Helvetica,sans-serif; font-size:10pt;}
+  .signoff .line{margin-top:46px; border-top:1px solid var(--ink); width:240px;}
+
+  .cred{margin-top:34px; font-family:Arial,Helvetica,sans-serif; font-size:9.5pt; color:var(--muted); line-height:1.7;}
+  .cred b{color:var(--brand-dark);}
+  .mimg{display:flex; gap:6px; margin:8px 0 2px;}
+  .mimg img{width:20%; height:88px; object-fit:cover; border-radius:4px; border:1px solid var(--line);
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  @page{ size:A4; margin:16mm; }
+  @media print{
+    .page{max-width:none; margin:0; padding:0;}
+    body{font-size:10.5pt;}
+    a{color:inherit; text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="page cover">
+  <div class="paws">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
+  <h1>Karmanye Foundation</h1>
+  <div class="tag">Compassion &nbsp;·&nbsp; Care &nbsp;·&nbsp; Co-existence</div>
+  <div class="rpt">
+    <div class="kicker">Annual Report</div>
+    <h2>Activity Report</h2>
+    <div class="period">Financial Year 2023–24 &nbsp;(1 April 2023 – 31 March 2024)</div>
+  </div>
+  <div class="cred">
+    Registered Section 8 Not-for-Profit Company &nbsp;·&nbsp; <b>CIN:</b> U85300PN2021NPL203519<br>
+    <b>PAN:</b> AAICK9637J &nbsp;·&nbsp; <b>12A:</b> AAICK9637JE20241 &nbsp;·&nbsp; <b>80G:</b> AAICK9637JF20241<br>
+    <b>Director:</b> Tina Malkani &nbsp;·&nbsp; tina@karmanye.org &nbsp;·&nbsp; +91-9923334246
+  </div>
+  <div class="foot">
+    Prepared for filing with the Registrar of Companies (ROC)<br>
+    and in support of Income-Tax Section 80G / 12A compliance
+  </div>
+</div>
+
+<!-- ============ OVERVIEW ============ -->
+<div class="page">
+  <div class="kicker">Section 1</div>
+  <h2 class="sec-title">Organisation &amp; Overview</h2>
+
+  <div class="idblock">
+    <table>
+      <tr><td class="k">Name of Organisation</td><td>Karmanye Foundation, Pune</td></tr>
+      <tr><td class="k">Reporting Period</td><td>1 April 2023 to 31 March 2024 (FY 2023–24)</td></tr>
+      <tr><td class="k">Principal Area of Work</td><td>Rescue, treatment, sterilisation, rehabilitation and rehoming of community &amp; street animals</td></tr>
+      <tr><td class="k">Area of Operation</td><td>Pune (Kharadi–Wagholi and surrounding areas), Maharashtra</td></tr>
+      <tr><td class="k">Legal Status</td><td>Registered Section 8 Not-for-Profit Company (NPO)</td></tr>
+      <tr><td class="k">CIN</td><td>U85300PN2021NPL203519</td></tr>
+      <tr><td class="k">PAN</td><td>AAICK9637J</td></tr>
+      <tr><td class="k">12A Registration No.</td><td>AAICK9637JE20241</td></tr>
+      <tr><td class="k">80G Registration No.</td><td>AAICK9637JF20241</td></tr>
+      <tr><td class="k">Director</td><td>Tina Malkani</td></tr>
+      <tr><td class="k">Email</td><td>tina@karmanye.org</td></tr>
+      <tr><td class="k">Contact</td><td>+91-9923334246</td></tr>
+    </table>
+  </div>
+
+  <p>During the financial year 2023–24, Karmanye Foundation continued its core charitable mission of relieving the suffering of community and street animals in and around Pune. During this year the Foundation received its <b>80G certification (April 2023)</b>, enabling donors to claim tax deductions on their contributions. The Foundation operates on a report-driven model: cases are reported by citizens, feeders, guards and volunteers; the animal is picked up and assessed; veterinary treatment or surgery is arranged at private clinics or paid shelters; and, wherever possible, the animal is rehabilitated and released back to its territory or placed in a permanent home. Alongside individual rescues, the Foundation undertook sterilisation and vaccination drives, community feeding and water-bowl provision during summer, senior and palliative care, support for elderly human feeders, and public advocacy for animal welfare and justice.</p>
+
+  <p>This report summarises the Foundation's activities month by month across the year. Approximately <b>39 representative cases</b> have been documented from the Foundation's field records, selected to reflect the range and scale of work undertaken. FY 2023-24 was an earlier, lower-volume year for the Foundation, so several months carry fewer cases. Each monthly entry is a narrative account of the principal cases and initiatives handled during that month.</p>
+
+  <div class="metrics">
+    <div class="metric"><span class="n">12</span><span class="l">Months of Activity</span></div>
+    <div class="metric"><span class="n">~39</span><span class="l">Cases Documented</span></div>
+    <div class="metric"><span class="n">7+</span><span class="l">Activity Areas</span></div>
+    <div class="metric"><span class="n">Pune</span><span class="l">Area of Service</span></div>
+  </div>
+
+  <div class="kicker">Nature of Activities Undertaken</div>
+  <table class="data">
+    <tr><th>Activity Head</th><th>Description</th></tr>
+    <tr><td>Rescue &amp; Emergency Care</td><td>Pick-up and hospitalisation of injured, sick and accident-affected animals; emergency surgeries and critical care.</td></tr>
+    <tr><td>Medical Treatment</td><td>Wound management, fracture treatment, tumour removal, chemotherapy (TVT), laser therapy, tick-fever treatment.</td></tr>
+    <tr><td>Sterilisation &amp; Vaccination</td><td>Neutering/spaying of community animals; deworming, de-fleaing and vaccination.</td></tr>
+    <tr><td>Rehabilitation &amp; Release</td><td>Recovery at paid fosters/shelters followed by release back to home territory.</td></tr>
+    <tr><td>Adoption &amp; Rehoming</td><td>Placement of recovered animals into permanent and virtual-adoption homes.</td></tr>
+    <tr><td>Senior &amp; Palliative Care</td><td>Care for elderly and terminally ill animals; dignified end-of-life support.</td></tr>
+    <tr><td>Community &amp; Human Welfare</td><td>Water-bowl project, community feeding, and support for elderly animal feeders.</td></tr>
+    <tr><td>Advocacy &amp; Justice</td><td>Public awareness and pursuit of justice in cases of cruelty (e.g. the Foxy case).</td></tr>
+  </table>
+</div>
+
+<!-- ============ SUMMARY TABLE ============ -->
+<div class="page newpage">
+  <div class="kicker">Section 2</div>
+  <h2 class="sec-title">Month-wise Summary</h2>
+  <table class="data">
+    <tr><th style="width:20%">Month</th><th style="width:14%">Cases</th><th>Principal Focus</th></tr>
+    <tr><td>April 2023</td><td>3</td><td>80G certification milestone; Pillu's tick-paralysis fight; Gundu</td></tr>
+    <tr><td>May 2023</td><td>4</td><td>Nugget adopted; Pillu's costliest crisis; Gundu & Arjun accidents</td></tr>
+    <tr><td>June 2023</td><td>5</td><td>Lalu, Kalu, Duggya, Patchy — a cluster of medical cases</td></tr>
+    <tr><td>July 2023</td><td>4</td><td>Sundari's critical tumour; Rocky's surgery; Kalu & Lalu home</td></tr>
+    <tr><td>August 2023</td><td>5</td><td>Pillu walks on wheels; Noor's surgery; Browny & Shakti</td></tr>
+    <tr><td>September 2023</td><td>3</td><td>Shakti released; Snowy's eye; Yuki adoption appeal</td></tr>
+    <tr><td>October 2023</td><td>2</td><td>Browny beats distemper after 50 days; Lalu's tumour</td></tr>
+    <tr><td>November 2023</td><td>3</td><td>Bhairoo's pelvic surgery; Jabya's TVT; farewell to Lalu</td></tr>
+    <tr><td>December 2023</td><td>2</td><td>Bhairoo & Jabya recovering at the shelter</td></tr>
+    <tr><td>January 2024</td><td>2</td><td>Winter beds project; Yuki virtual-adoption appeal</td></tr>
+    <tr><td>February 2024</td><td>1</td><td>A quiet month; farewell to Jack</td></tr>
+    <tr><td>March 2024</td><td>5</td><td>Bhairoo released; Julie, Bhola, Sweety, Durga</td></tr>
+  </table>
+  <p class="small muted">Note: Case counts reflect representative cases documented for this report and are not the total number of animals assisted, which is higher. Dates are drawn from field records; where a specific date was unavailable, the case has been placed in the month of record.</p>
+</div>
+
+<!-- ============ MONTHLY NARRATIVES ============ -->
+<div class="page newpage">
+  <div class="kicker">Section 3</div>
+  <h2 class="sec-title">Month-by-Month Activity Record</h2>
+  <div class="month">
+    <h3>April 2023 <span class="cnt">3 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Pillu · Gundu · 80G Certification</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/04/image_editor_output_image542834838-1680693664011.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/04/img_20230405_133538.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/04/img_20230405_135817.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/04/screenshot_2023-04-05-16-17-13-67_4336b74596784d9a2aa81f87c2016f50.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/04/screenshot_2023-04-05-16-23-46-97_4336b74596784d9a2aa81f87c2016f50.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>April opened a landmark month for the Foundation, which received its <b>80G certification</b> — a milestone that lets donors claim tax deductions and reflects the organisation's growing formal standing; fittingly, the Foundation takes its name from the Bhagavad Gita's teaching on selfless action. On the ground, the month was dominated by <b>Pillu</b>, a gentle, deeply human-friendly boy admitted with tick-bite paralysis. Over the month he moved from full paralysis to holding his head up and regaining strength in his hind legs, at a recurring cost of about ₹20,000 every seven to eight days — until, late in April, his wounds flared, his leg became infected and he ran a 106°F fever, a frightening setback. <b>Gundu</b>, one of the Foundation's oldest dogs, neared the end of a long recovery from a maggot-infested ear and was almost ready to return home.</p>
+  </div>
+  <div class="month">
+    <h3>May 2023 <span class="cnt">4 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Nugget · Pillu · Gundu · Arjun</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/05/img-20230314-wa007428129.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/05/img_20230423_180737.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/05/picsart_23-05-12_13-06-52-214.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/05/img_20230516_113442.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/05/img-20230515-wa0049.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>May held the Foundation's best news in a long time — <b>Nugget</b>, after a nine-month wait, was finally adopted into a permanent home. It also held one of its darkest moments: <b>Pillu's</b> treatment costs mounted so steeply that, for the first time, the team agonised over whether it could afford to continue, before resolving to press on as he slowly began gaining weight again. Tragedy struck <b>Gundu</b>, freshly released after her ear treatment, when she was hit by a scooter and left unable to rise; at fourteen she fought hard and stayed remarkably cooperative through her care. <b>Arjun</b>, a community dog reported immobile after a hit-and-run, was picked up, X-rayed and taken in for treatment. It was a month that captured the Foundation's emotional extremes — a joyful adoption alongside wrenching decisions about cost and survival.</p>
+  </div>
+  <div class="month">
+    <h3>June 2023 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Lalu · Kalu · Duggya · Patchy · Bhaloo</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/06/img_20230602_141234_550.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/06/img_20230602_141234_602.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/06/img_20230602_141234_660.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/06/img_20230602_141234_689.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/06/img_20230602_141234_705.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>June brought a cluster of medical cases. <b>Lalu</b>, Bhalu's companion, developed a painful aural haematoma in his ear that resisted on-site treatment; alongside him, <b>Kalu</b> suffered an alarming emergency when blood poured from his nose at a routine check-up, and both were found to have tick fever, with Kalu also nursing a burst elbow abscess. <b>Duggya</b>, a bike-garage owner's dog reported limping in pain, was found to have a hind-leg fracture, casted and placed in private foster. <b>Patchy</b>, a beautiful pup, was diagnosed with rickets brought on by nutritional deficiency from being born on the streets. And <b>Bhaloo</b>, treated and released the previous year, stopped eating and grew listless, prompting the Foundation to step in once more.</p>
+  </div>
+  <div class="month">
+    <h3>July 2023 <span class="cnt">4 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Sundari · Rocky · Kalu & Lalu · Patchy</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/07/image_editor_output_image1651457188-1690008834787.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/07/screenshot_2023-07-22-12-10-21-35_7352322957d4404136654ef4adb64504.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/07/img-20230612-wa0055.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/07/img-20230616-wa0048.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/07/image_editor_output_image-2144475038-1690008868332.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>July's most harrowing case was <b>Sundari</b>, a runner who took two days to catch and whose critical tumour — dripping blood and infested with maggots — was too advanced for surgery; placed in private foster, she began, remarkably, to improve, the bleeding and maggots gone within a fortnight. <b>Rocky</b> healed beautifully after surgery to remove a small tumour on his head and returned to his territory, his treatment, foster and tests costing around ₹12,700 with a clear biopsy hoped for. <b>Kalu and Lalu</b> returned to their home ground to continue treatment on-site — Kalu on hepatic food and supplements for his liver, Lalu's ear haematoma steadily shrinking. A happy update also came for <b>Patchy</b>.</p>
+  </div>
+  <div class="month">
+    <h3>August 2023 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Pillu · Noor · Browny · Shakti · Sundari</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/08/img_20230802_152011_026.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/08/img_20230802_152011_099.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/08/img_20230802_152011_117.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/08/img_20230802_152011_156.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/08/img_20230802_152011_185.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>August combined surgery, milestones and a fresh emergency. <b>Noor</b> underwent surgery to be spayed and to have a damaged eye removed, recovering well. <b>Pillu</b> reached a moving milestone — after months of paralysis he began walking on wheels and using his front legs, a triumph his caregivers and vets had worked toward all year. <b>Sundari</b> completed a month in foster care, safe, fed and sheltered after her suffering on the roads. A new urgent case arose in <b>Browny</b>, a normally playful dog the Foundation feeds daily, who turned listless and stopped eating and was rushed in for treatment. And <b>Shakti</b>, a pup from a shepherd family camped near a feeding area, was taken up for care.</p>
+  </div>
+  <div class="month">
+    <h3>September 2023 <span class="cnt">3 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Shakti · Snowy · Yuki</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/09/img_20230904_175852.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/09/img_20230904_175514.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/09/img_20230904_175323.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/09/img-20230901-wa005328129.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/09/img_20230906_114931.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>September was a quieter month centred on recovery and rehoming. <b>Shakti</b> recovered and was released back to his shepherd family, who were overjoyed to have him home, with his first vaccinations administered. <b>Snowy</b> was found one afternoon with a swollen, gooey, closed eye, too painful to touch; the Foundation picked her up without delay and took her straight to a canine ophthalmologist. The Foundation also ran an adoption appeal for <b>Yuki</b>, found lost and hassled on the streets, sending out hope that he would find a forever home, alongside a gentle 'share a little of your salary' fundraising drive for community feeding.</p>
+  </div>
+  <div class="month">
+    <h3>October 2023 <span class="cnt">2 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Browny · Lalu</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/10/screenshot_2023-10-03-09-42-26-92_92460851df6f172a4592fca41cc2d2e6.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231103_103711_675.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231103_103711_695.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231103_103711_743.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231103_103711_803.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>October's headline was a hard-won recovery: <b>Browny</b> came back to his territory after a fifty-day fight in which he survived distemper and several other complications, finding his way back into his pack — a fighter whose treatment bill reached ₹38,200. The month's difficult case was <b>Lalu</b>, whose investigations revealed a tumour; with Diwali approaching, the Foundation appealed for support to give him, and many like him, a chance to live, openly acknowledging how overwhelming the caseload had become.</p>
+  </div>
+  <div class="month">
+    <h3>November 2023 <span class="cnt">3 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Bhairoo · Jabya · Lalu</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/picsart_23-11-10_19-41-05-846.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231113_203748_223.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231113_203748_244.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231113_203748_273.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/11/img_20231128_111108_606.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>November brought a serious new rescue and a painful loss. <b>Bhairoo</b>, a gentle giant the Foundation adores, was hit by a vehicle and admitted with a pelvic fracture; his surgery, in which a plate was inserted, was completed successfully against an advance of ₹30,000, and he stabilised. <b>Jabya</b>, a free-spirited, trusting boy, was diagnosed with TVT (transmissible venereal tumour) and began treatment. The month closed in grief as <b>Lalu</b> — battling cancer — deteriorated overnight and, on veterinary advice, was gently released from his suffering. The Foundation also marked Diwali with heartfelt thanks to its supporters.</p>
+  </div>
+  <div class="month">
+    <h3>December 2023 <span class="cnt">2 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Bhairoo · Jabya</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2023/12/img_20231202_162536_267.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/12/img_20231202_162536_308.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/12/img_20231202_162536_338.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/12/img_20231202_162536_360.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2023/12/img_20231202_162536_377.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>December was quieter but focused on two recovering boys. <b>Bhairoo's</b> remarkable story — from a pelvic fracture to walking again after surgery — was shared to rally support, as the Foundation, out of funds, cared for him alongside its other rescues. Mid-month, both <b>Bhairoo and Jabya</b> were visited at the shelter, delighted to see their rescuer; Bhairoo's appetite was still poor and needed watching, but both were on the mend and being reassured that home was not far away.</p>
+  </div>
+  <div class="month">
+    <h3>January 2024 <span class="cnt">2 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Winter beds · Yuki</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/screenshot_2024-03-11-21-01-54-89_1c337646f29875672b5a61192b9010f93184745273159645847.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/01/image_editor_output_image-2008448890-17042732056032014666668215416282.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img-20240219-wa003328129929676759667841031.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>January's work continued quietly through the winter. A <b>virtual-adoption appeal</b> was renewed for <b>Yuki</b>, a sterilised, vaccinated Lab-mix still waiting for a home. The Foundation also completed a <b>winter beds project</b>, distributing warm beds to community dogs across Pune to see them through the cold — a small but meaningful comfort for animals living on the streets. Posting slowed as the founder tended to an unwell home dog, but the feeding and care work carried on uninterrupted.</p>
+  </div>
+  <div class="month">
+    <h3>February 2024 <span class="cnt">1 case</span></h3>
+    <div class="cases"><b>Featured:</b> Jack</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img-20240228-wa0124281296449709809410117872.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img-20240228-wa01331406611984176476768.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img-20240226-wa01551921852560610526025.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img-20240226-wa01538777866402580343705.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img-20240226-wa01516172169641440023382.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>February was a month of quiet loss. <b>Jack</b>, a sweet boy the Foundation had been fighting for, lost his battle with life when his small body could take no more, and passed despite every effort made on his behalf. His caregivers marked his passing with love and sorrow — a reminder that, for all the recoveries, some cases end in heartbreak, and that each animal is grieved as one of the Foundation's own.</p>
+  </div>
+  <div class="month">
+    <h3>March 2024 <span class="cnt">5 cases</span></h3>
+    <div class="cases"><b>Featured:</b> Bhairoo · Julie · Bhola · Sweety · Durga</div>
+    <div class="mimg">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img_20240327_1128178648939268332790110.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img_20240327_1128073342576987052857320.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/picsart_24-03-07_16-05-03-1325417454668378605594.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img_20240307_165542_3586291229156532607025.jpg" onerror="this.style.display='none'">
+      <img src="https://karmanye.org/wp-content/uploads/2024/03/img_20240307_165542_3875669328538843252741.jpg" onerror="this.style.display='none'">
+    </div>
+    <p>The year closed with a busy March of rescues, a release and an adoption. <b>Bhairoo</b>, whose long journey began with a pelvic fracture in November, was finally released back to his territory and his companions after surgery and months of recovery — a triumphant close to his story. <b>Julie</b>, a beloved dog outside the founder's society, was treated for infections around her eyes and nose; the medication worked well, though elevated kidney levels meant she needed a little longer before release. <b>Bhola</b> was taken up for a painful ear injury he would not let anyone examine, and <b>Sweety</b> — loving and friendly — was checked for a growing, ulcerating lump on her leg, opening a case that would continue into the following year. An adoption appeal was also shared for the feisty young pup <b>Durga</b>.</p>
+  </div>
+
+  <div class="signoff">
+    <p>This report is a true summary of the charitable activities carried out by Karmanye Foundation during the financial year 1 April 2023 to 31 March 2024, based on the Foundation's field and publication records.</p>
+    <div class="line"></div>
+    <div class="small muted">Authorised Signatory &nbsp;·&nbsp; Karmanye Foundation<br>Date: __________________ &nbsp; Place: Pune</div>
+  </div>
+</div>
+
+</body>
+</html>
